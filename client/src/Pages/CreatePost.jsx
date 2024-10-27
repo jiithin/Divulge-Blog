@@ -25,7 +25,7 @@ function CreatePost() {
     const [file, setFile] = useState(null);
     const [imageUploadProgress, setImageUploadProgress] = useState(null);
     const [imageUploadError, setImageUploadError] = useState(null);
-    const [formData, setFormData] = useState({username: currentUser.username, userProfile: currentUser.profilePicture,});
+    const [formData, setFormData] = useState({username: currentUser.username, userProfile: currentUser.profilePicture});
     const [publishError, setPublishError] = useState(null);
   
     const navigate = useNavigate();
