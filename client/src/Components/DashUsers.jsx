@@ -139,19 +139,18 @@ function DashUsers() {
           size='md'
           className="bg-transparent backdrop-blur-sm "
         >
-          <Modal.Header className="bg-slate-500 rounded-t-md " />
-          <Modal.Body className="bg-slate-500 rounded-b-md " >
+          <Modal.Header className="bg-gray-300 rounded-t-md " />
+          <Modal.Body className="bg-gray-300 rounded-b-md " >
             <div className='text-center'>
-              <FaUserAltSlash  className='h-16 w-16 text-red-500 dark:text-red-700 mb-4 mx-auto' />
-              <p className='mb-5 text-lg text-gray-100 dark:text-gray-400'>
+              <p className='mb-5 text-lg text-gray-600 dark:text-gray-400'>
                 Are you sure you want to <span className='text-red-500 font-bold'>Remove</span> this User?
               </p>
               <div className='flex justify-center gap-4'>
                 <Button color='failure' onClick={handleDeleteUser} 
                 className='w-full' >
-                  Delete
+                  Remove <FaUserAltSlash className='h-5 w-5 mx-2'/>
                 </Button>
-                <Button color='dark' onClick={() => setShowModal(false)}
+                <Button color='' onClick={() => setShowModal(false)}
                     className='w-full' >
                   Cancel
                 </Button>

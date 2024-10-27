@@ -7,7 +7,6 @@ import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/
 import { app } from '../firebase';
 import {updateStart, updateSuccess, updateFailure, deleteUserStart, deleteUserSuccess, deleteUserFailure, signoutSuccess } from '../redux/user/userSlice.js'
 import { FaUserShield } from "react-icons/fa";
-import { BiSolidTrashAlt } from "react-icons/bi";
 import { HiInformationCircle } from "react-icons/hi";
 import { FcOk } from "react-icons/fc";
 import { useNavigate } from 'react-router-dom';
@@ -366,11 +365,10 @@ function DashProfile() {
         popup
         className="bg-transparent backdrop-blur-sm "
       >
-        <Modal.Header className="bg-slate-500 rounded-t-md " />
-        <Modal.Body className="bg-slate-500 rounded-b-md">
+        <Modal.Header className="bg-gray-300 rounded-t-md " />
+        <Modal.Body className="bg-gray-300 rounded-b-md">
           <div className="text-center bg-transparent">
-            <FaUserShield className="mx-auto mb-4 h-16 w-16 text-red-500" />
-            <p className="mb-5 text-lg font-normal text-gray-100 dark:text-gary-100">
+            <p className="mb-5 text-lg font-normal text-gray-600 dark:text-gary-100">
               Are you sure you want to <span className='font-bold text-red-500'>delete</span> your Account?
             </p>
             <div className="flex justify-center gap-4">
@@ -379,10 +377,10 @@ function DashProfile() {
                 onClick={handleDeleteUser}
                 className="w-full"
               >
-                Delete <BiSolidTrashAlt className="h-5 w-5 mx-2" />
+                Delete <FaUserShield className="mx-2 h-5 w-5 " />
               </Button>
               <Button
-                color="dark"
+                color=""
                 onClick={() => setShowModal(false)}
                 className="w-full"
               >

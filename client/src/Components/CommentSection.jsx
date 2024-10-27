@@ -203,19 +203,19 @@ import Comments from './Comments';
           size='md'
           className="bg-transparent backdrop-blur-sm "
         >
-          <Modal.Header className="bg-slate-500 rounded-t-md " />
-          <Modal.Body className="bg-slate-500 rounded-b-md " >
+          <Modal.Header className="bg-gray-300 rounded-t-md " />
+          <Modal.Body className="bg-gray-300  rounded-b-md " >
             <div className='text-center'>
  
-              <p className='mb-5 text-lg text-gray-100 dark:text-gray-400'>
-                You want to <span className='text-red-400 font-semibold'>Remove</span> this comment?
+              <p className='mb-5 text-lg text-gray-600 dark:text-gray-400'>
+                Do you want to <span className='text-red-500 font-semibold'>Remove</span> this comment?
               </p>
               <div className='flex justify-center gap-4'>
                 <Button color='failure' onClick={() => handleDelete(commentToDelete)}
                 className='w-full' >
-                  Delete
+                  Remove
                 </Button>
-                <Button color='dark' onClick={() => setShowModal(false)}
+                <Button color='' onClick={() => setShowModal(false)}
                     className='w-full' >
                   Cancel
                 </Button>

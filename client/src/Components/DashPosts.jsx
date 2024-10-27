@@ -1,6 +1,5 @@
 import { Button, Card, Modal, Table } from 'flowbite-react'
 import React, { useEffect, useState } from 'react'
-import { TbFileShredder } from "react-icons/tb";
 import { useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -254,14 +253,14 @@ function DashPosts() {
         show={showModal}
         onClose={() => setShowModal(false)}
         popup
-        size='md'
+        size='xl'
         className="bg-transparent backdrop-blur-sm "
       >
-        <Modal.Header className="bg-slate-500 rounded-t-md " />
-        <Modal.Body className="bg-slate-500 rounded-b-md " >
+        <Modal.Header className="bg-gray-300 rounded-t-md " />
+        <Modal.Body className="bg-gray-300 rounded-b-md " >
           <div className='text-center'>
-            <TbFileShredder  className='h-16 w-16 text-red-500 dark:text-gray-200 mb-4 mx-auto' />
-            <p className='mb-5 text-lg text-gray-100 dark:text-gray-100'>
+           
+            <p className='mb-5 text-lg text-gray-600 dark:text-gray-100'>
               Are you sure you want to <span className='text-red-500 font-bold'>delete</span> this post?
             </p>
             <div className='flex justify-center gap-4'>
@@ -269,7 +268,7 @@ function DashPosts() {
               className="w-full" >
                 Delete
               </Button>
-              <Button color='dark' onClick={() => setShowModal(false)}
+              <Button color='' onClick={() => setShowModal(false)}
                 className="w-full" >
                 Cancel
               </Button>
