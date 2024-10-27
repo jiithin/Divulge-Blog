@@ -25,7 +25,7 @@ function CreatePost() {
     const [file, setFile] = useState(null);
     const [imageUploadProgress, setImageUploadProgress] = useState(null);
     const [imageUploadError, setImageUploadError] = useState(null);
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({username: currentUser.username, userProfile: currentUser.profilePicture,});
     const [publishError, setPublishError] = useState(null);
   
     const navigate = useNavigate();
@@ -58,7 +58,7 @@ const handleUpdloadImage = async () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setImageUploadProgress(null);
             setImageUploadError(null);
-            setFormData({ ...formData, image: downloadURL, username: currentUser.username, userProfile: currentUser.profilePicture, });
+            setFormData({ ...formData, image: downloadURL });
           });
         }
       );

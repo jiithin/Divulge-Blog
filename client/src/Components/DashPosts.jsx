@@ -124,6 +124,7 @@ function DashPosts() {
     <div className='px-4 mt-4 '>
     {/* <p className=' text-center lg:text-3xl text-xl font-Montserrat font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-l to-blue-400 from-purple-600 '>All Posts</p> */}
     {currentUser.isAdmin && userPosts.length > 0 ? (
+      <>
 <Card className="max-w-4xl mx-auto bg-gray-100/75 dark:bg-slate-800/50 shadow-lg">
       <div className=" flex items-center justify-between">
         <p className="text-xl font-Montserrat font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-l to-blue-400 from-purple-600">Your Posts</p>
@@ -176,6 +177,18 @@ function DashPosts() {
         </ul>
       </div>
     </Card>
+
+    <div>
+                    {showMore && (
+            <button
+              onClick={handleShowMore}
+              className='w-full font-Montserrat font-semibold text-indigo-500 dark:text-indigo-500 self-center text-sm py-7'
+            >
+              Show more
+            </button>
+          )}
+    </div>
+    </>
     
     ) : (
         <p className='divulge py-12 text-center lg:text-3xl text-xl font-Montserrat font-semibold  mb-4 text-transparent bg-clip-text bg-gradient-to-l to-blue-400 from-purple-600 '>No Posts Yet.</p>
@@ -232,14 +245,7 @@ function DashPosts() {
     ) : (
         <p className='divulge py-12 text-center lg:text-3xl text-xl font-Montserrat font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-l to-blue-400 from-purple-600 '> </p>
       )}
-                {showMore && (
-            <button
-              onClick={handleShowMore}
-              className='w-full font-Montserrat font-semibold text-indigo-500 dark:text-indigo-500 self-center text-sm py-7'
-            >
-              Show more
-            </button>
-          )}
+
       </div>
 
 
