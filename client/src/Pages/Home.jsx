@@ -134,7 +134,7 @@ function Home() {
     </div>
     <div className="flex flex-col w-full md:flex-row dark:bg-gray-300">
         <div className="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 dark:text-white uppercase bg-white dark:bg-gray-800 md:flex-col md:items-center md:justify-center md:w-1/4">
-            <div className="md:text-xl">Latest</div>
+            <div className="md:text-xl">New</div>
             <div className="md:text-3xl">{new Date(userPosts[0].createdAt).toLocaleDateString()}  </div>
         </div>
         <div className="p-4 font-normal text-gray-800 md:w-3/4">
@@ -170,11 +170,10 @@ function Home() {
 
 
 {/* cards middle*/}
-<div className='max-w-6xl mx-auto px-5'>
-
+<div className='max-w-6xl mx-auto px-5 font-Montserrat'>
+<p className='font-bold text-2xl pt-3 pb-2 w-fit text-transparent bg-clip-text bg-gradient-to-l to-teal-300 via-purple-500 from-indigo-400'>Latest Articles</p>
 <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  gap-4  ">
   
-
   {/* card */}
 {userPosts && userPosts.length > 0 ? ( userPosts.slice(1,5).map((post) => (
 <div
@@ -230,7 +229,8 @@ function Home() {
 
 
 {/* list end */}
-<div className="flex flex-col h-auto bg-transparent items-center mt-5 font-Montserrat mx-auto max-w-6xl mb-5">
+<div className="flex flex-col h-auto bg-transparent mt-5 font-Montserrat mx-auto max-w-6xl mb-5">
+<p className='font-bold text-2xl pt-5 px-5 w-fit text-transparent bg-clip-text bg-gradient-to-l to-emerald-400 via-purple-500 from-indigo-400'>Popular</p>
   <div className="grid gap-7  px-5 grid-cols-3 ">
    {/* cards */}
    {userPosts && userPosts.length > 0 ? (userPosts.slice(5,8).map((post) => (

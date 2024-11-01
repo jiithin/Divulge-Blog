@@ -61,7 +61,7 @@ function Projects() {
   return (
     <>
         <div><p className='text-4xl font-Montserrat font-semibold py-5 text-center justify-center '>
-        <span className='text-transparent bg-clip-text bg-gradient-to-l to-blue-300 from-purple-500'>Latest Blogs</span></p></div>
+        <span className='text-transparent bg-clip-text bg-gradient-to-l to-blue-400 from-purple-500'>Latest Blogs</span></p></div>
 <div class="flex flex-wrap place-items-center font-Montserrat mt-3">
   <section class=" relative mx-auto">
         <form onSubmit={handleSubmit} className='w-72'>
