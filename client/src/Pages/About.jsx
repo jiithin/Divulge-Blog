@@ -12,7 +12,7 @@ function About() {
     
 
     {/* sample */}
-    <div className="bg-transparent relative   flex items-center font-Montserrat  justify-center overflow-hidden z-50 ">
+    <div className="bg-transparent relative   flex items-center font-Montserrat  justify-center overflow-hidden z-50 min-h-100vh">
      
     <div className="relative mx-auto h-full px-4  pb-20   md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
         <div className="flex flex-col items-center justify-between lg:flex-row py-16">
@@ -29,10 +29,9 @@ function About() {
                     Discover, delve deeper
                         <span className="my-1 inline-block border-b-8 border-g4 bg-purple-500 px-4 font-bold text-g4 animate__animated animate__flash">Divulge</span>
                     </h2>
-                    <p className="text-base text-gray-700">Divulge is a collaborative platform created by a jithin. We're committed to fostering a community where ideas are shared, knowledge is gained, and connections are made.</p>
+                    <p className="text-base text-gray-700">Divulge is a Blogging platform created by a jithin. We're committed to fostering a community where ideas are shared, knowledge is gained, and connections are made.</p>
                     <div className="mt-10 flex flex-col items-center md:flex-row backdrop-blur-md">
-                        <a href="/" className="mb-3 inline-flex h-12 w-full items-center justify-center rounded-xl bg-purple-600/50 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-500/50 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
-                            View More</a>
+
                         <a href="https://github.com/jiithin/" aria-label="" className="group inline-flex items-center font-semibold text-g1">Watch how
                             it works<MdArrowForwardIos className='ml-2 group-hover:translate-x-2 delay-100 duration-200' />
                         </a>
