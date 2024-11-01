@@ -230,7 +230,7 @@ function Home() {
 
 {/* list end */}
 <div className="flex flex-col h-auto bg-transparent mt-5 font-Montserrat mx-auto max-w-6xl mb-5">
-<p className='font-bold text-2xl pt-5 px-5 w-fit text-transparent bg-clip-text bg-gradient-to-l to-emerald-400 via-purple-500 from-indigo-400'>Popular</p>
+<p className='font-bold text-2xl pt-5 px-5 w-fit text-transparent bg-clip-text bg-gradient-to-l to-teal-300 via-purple-500 from-indigo-400'>Popular</p>
   <div className="grid gap-7  px-5 grid-cols-3 ">
    {/* cards */}
    {userPosts && userPosts.length > 0 ? (userPosts.slice(5,8).map((post) => (
