@@ -83,7 +83,7 @@ function Header() {
 
   <button type="button" className="w-12 h-10 hidden sm:inline  bg-transparent   rounded-lg text-sm px-3 text-center items-center  dark:bg-inherit" 
   onClick={() => dispatch(toggleTheme())}>
-  {theme === 'light' ?(<CgDarkMode className='w-6 h-6 text-purple-500'/>):(<CgDarkMode className='w-6 h-6 text-teal-200'/>)}
+  {theme === 'light' ?(<CgDarkMode className='w-7 h-7 duration-500 text-indigo-400'/>):(<CgDarkMode className='w-7 h-7 rotate-180 duration-500 text-teal-300'/>)}
 </button>
 
 

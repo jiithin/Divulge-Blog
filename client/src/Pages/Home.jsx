@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 //import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { IoSearchOutline } from "react-icons/io5";
+import { IoIosArrowForward } from "react-icons/io";
 
 import { TbLoader } from 'react-icons/tb';
 
@@ -74,7 +75,7 @@ function Home() {
             </Link>
             <span className='text-2xl'>|</span>
             <Link to={'/about'} className='px-3'>
-            Contact 
+            About Us
             </Link>
         </div>
         </div>
@@ -105,7 +106,7 @@ function Home() {
             </Link>
             <span className='text-2xl'>|</span>
             <Link to={'/about'} className='px-3'>
-            Contact 
+            About
             </Link>
             <form onSubmit={handleSubmit} className='hidden md:inline'>
   <TextInput
@@ -124,15 +125,15 @@ function Home() {
 
 
 
-
+{/* card top only one */}
 {userPosts && userPosts.length > 0 ? ( 
-<div className="mx-auto h-auto flex items-center justify-center lg:px-36 px-5 my-8 " onClick={(e) =>  navigate(`/post/${userPosts[0].slug}`)}>
+<div className="mx-auto h-auto flex items-center justify-center max-w-6xl px-5 my-8 " onClick={(e) =>  navigate(`/post/${userPosts[0].slug}`)}>
   <div className="flex flex-col w-full rounded shadow-lg ">
     <div className="w-full h-64 bg-top bg-cover rounded-t">
     <img src={userPosts[0].image} alt={userPosts[0].title} className='h-full w-full object-cover' />
     </div>
     <div className="flex flex-col w-full md:flex-row dark:bg-gray-300">
-        <div className="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400/30 rounded md:flex-col md:items-center md:justify-center md:w-1/4">
+        <div className="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 dark:text-white uppercase bg-white dark:bg-gray-800 md:flex-col md:items-center md:justify-center md:w-1/4">
             <div className="md:text-xl">Latest</div>
             <div className="md:text-3xl">{new Date(userPosts[0].createdAt).toLocaleDateString()}  </div>
         </div>
@@ -150,68 +151,35 @@ function Home() {
         </div>
     </div>
 </div>
-</div>):(
-      <div className="grid grid-flow-col grid-cols-8"></div>
+</div>
+):(
+  <div className='flex justify-center items-center min-h-screen'>
+
+  {/* loader custom */}
+  <div className="w-full gap-x-2 flex justify-center items-center">
+  <p className='text-gray-500'>Try reloading</p>
+        <TbLoader    className='w-8 h-8 text-purple-600 animate-spin'/>
+  </div>
+  
+        </div>
     )}
 
 {/* <div><p id='head'>DIVULGE</p></div> */}
 
 
-{userPosts && userPosts.length > 0 ? ( 
-<div className="container mx-auto my-5 lg:hidden md:hidden">
-<Link to={`/post/${userPosts[0].slug}`}>
-    <div className="relative rounded-lg flex flex-col md:flex-row items-center md:shadow-xl md:h-72 mx-2">
-        
-        <div className="z-0 order-1 md:order-2 relative w-full md:w-2/5 h-80 md:h-full overflow-hidden rounded-lg md:rounded-none md:rounded-r-lg">
-            <div className="absolute inset-0 w-full h-full object-fill object-center bg-blue-400 bg-opacity-30 bg-cover bg-bottom">
-            <img
-                  src={userPosts[0].image}
-                  alt={userPosts[0].title}
-                  className="rounded-sm" />
-            </div>
-            <div className="md:hidden absolute inset-0 h-full p-6 pb-6 flex flex-col-reverse justify-start items-start bg-gradient-to-b from-transparent via-transparent to-gray-900">
-                <p className="w-full font-bold text-2xl text-white leading-tight mb-2">{userPosts[0].title}</p>
-                <p className="w-full text-xl text-gray-100 leading-tight">{userPosts[0].category}</p>
-            </div>
-
-        </div>
-
-        <div className="z-10 order-2 md:order-1 w-full h-full md:w-3/5 flex items-center -mt-6 md:mt-0">
-            <div className="p-8 md:pr-18 md:pl-14 md:py-12 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none">
-                <h4 className="hidden md:block text-xl text-gray-400">{userPosts[0].category}</h4>
-                <h3 className="hidden md:block font-bold text-2xl text-gray-700">{userPosts[0].title}</h3>
-                <p className="text-gray-600 text-justify" dangerouslySetInnerHTML={{ __html: userPosts[0] && userPosts[0].content.slice(0, userPosts[0].content.indexOf('.')) }}></p>
-                <a className="flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900" href="">
-                    <span>View More</span>
-                    <span className="text-xs ml-1">&#x279c;</span>
-                </a>
-            </div>
-        </div>
-
-    </div>
-    </Link>
-</div>):(
-
-<div className='flex justify-center items-center min-h-screen'>
-
-{/* loader custom */}
-<div className="w-full gap-x-2 flex justify-center items-center">
-<p className='text-gray-500'>Try reloading</p>
-      <TbLoader    className='w-8 h-8 text-purple-600 animate-spin'/>
-</div>
-
-      </div>
-    )}
 
 
-{/* cards */}
-<div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-4 p-4 lg:px-36">
+{/* cards middle*/}
+<div className='max-w-6xl mx-auto px-5'>
+
+<div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  gap-4  ">
+  
 
   {/* card */}
-{userPosts && userPosts.length > 0 ? ( userPosts.map((post) => (
+{userPosts && userPosts.length > 0 ? ( userPosts.slice(1,5).map((post) => (
 <div
-  className="card shadow-lg lg:h-[20em] h-[15em] max-w-screen-2xl group gap-[0.5em] rounded-xl relative flex justify-end flex-col z-10 overflow-hidden " onClick={(e) =>  navigate(`/post/${post.slug}`)}>
-    <img src={ post.image} alt={ post.title} className="absolute align-middle top-0 left-0 w-full h-full rounded-lg object-cover" />
+  className="card shadow-lg lg:h-[20em] h-[15em] max-w-screen-2xl group gap-[0.5em] relative flex justify-end flex-col z-10 overflow-hidden " onClick={(e) =>  navigate(`/post/${post.slug}`)}>
+    <img src={ post.image} alt={ post.title} className="absolute align-middle top-0 left-0 w-full h-full  object-cover" />
   <div className="absolute align-middle top-0 left-0 h-full w-full group-hover:backdrop-blur-sm bg-gradient-to-b from-transparent via-transparent to-gray-900 group-hover:bg-gray-900/40"></div>
 
 
@@ -257,6 +225,71 @@ function Home() {
 
 
 )}
+</div>
+</div>
+
+
+{/* list end */}
+<div className="flex flex-col h-auto bg-transparent items-center mt-5 font-Montserrat mx-auto max-w-6xl mb-5">
+  <div className="grid gap-7  px-5 grid-cols-3">
+   {/* cards */}
+   {userPosts && userPosts.length > 0 ? (userPosts.slice(5,8).map((post) => (
+  <div className="relative mx-auto col-span-2 w-full pt-3">
+  <Link to={`/post/${post.slug}`} className="relative inline-block w-full transform transition-transform duration-300 ease-in-out">
+    <div className="rounded-lg">
+      <div className="relative bg-purple-800/20 flex h-auto justify-center overflow-hidden">
+        <div className="w-auto h-40 lg:h-52 transform transition-transform duration-500 ease-in-out hover:scale-110">
+          <img src={ post.image} alt={ post.title} />
+        </div>
+
+
+        <span className="absolute left-0 top-0 z-10 ml-3 mt-3 inline-flex select-none bg-gray-100 px-2 py-1 text-sm text-slate-900 font-semibold">{post.category}</span>
+      </div>
+
+      <div className="">
+        <div className="mt-4">
+          <div className="flex items-center">
+            <div className="relative">
+              <p className="line-clamp-1 text-base lg:text-2xl  font-semibold text-gray-800 dark:text-gray-200 md:text-lg" title="New York">{post.title}</p>
+              <p className="mt-1 line-clamp-1 text-sm text-gray-500 dark:text-gray-300"><span className=' font-semibold'>{post.username}</span>	·  {post && (post.content.length / 1000).toFixed(0)} mins read</p>
+              <p className=" text-gray-400 dark:text-gray-500 text-xs">{post && new Date(post.createdAt).toLocaleDateString()} </p>
+            </div>
+          </div>
+        </div>
+
+        <p
+    className=" block h-20 lg:h-24 text-sm text-pretty lg:text-base text-blackfont-light relative group-hover:h-24 leading-[1.2em] duration-500 overflow-hidden text-gray-900 dark:text-gray-300 "
+    dangerouslySetInnerHTML={{ __html: post && post.content }} >
+    
+  </p>
+
+        <div className="mt-4 border-b border-gray-300 dark:border-gray-700 ">
+
+        </div>
+      </div>
+    </div>
+  </Link>
+</div>))):(
+      <div className='flex justify-center items-center w-screen  min-h-screen '>
+
+      </div>
+)}
+
+<div className="col-span-1 items-start pt-3">
+<div className="mx-auto max-w-xs rounded-xl px-6 py-10 text-gray-600 dark:text-gray-100">
+  <p className="mb-4 w-fit rounded-md bg-purple-200 dark:bg-purple-200/70 px-2 py-1 text-sm font-medium text-purple-700 dark:text-purple-800">Related</p>
+  <p className="mb-2 text-2xl">Read our Community guidelines</p>
+  <p className="mb-6 text-gray-500 dark:text-gray-300">Avoid offensive or derogatory language. Be mindful of the words you choose and their potential impact on readers. 
+    <span className='hidden lg:inline'>
+  When referencing others' work, always give credit. This not only shows respect for the original creator but also enhances your credibility.
+    </span> </p>
+  <Link to={'/updates'} className="flex items-center space-x-2 rounded-md px-4 py-2 font-semibold text-purple-500 hover:text-purple-600 group"> Learn more
+    <span><IoIosArrowForward className='w-5 h-5 group-hover:translate-x-2 ml-1 duration-300 delay-150' /></span>
+  </Link>
+</div>
+
+</div>
+</div>
 </div>
 
 

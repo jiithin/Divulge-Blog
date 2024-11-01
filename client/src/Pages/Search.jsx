@@ -145,7 +145,7 @@ function Search() {
         </p>
         </div>
         
-        <form className=' gap-8 border-b border-gray-300 dark:border-gray-600' onSubmit={handleSubmit}>
+        <form className='flex gap-8 border-b border-gray-300 dark:border-gray-600' onSubmit={handleSubmit}>
         <div className='flex p-3 items-center gap-2'>
             <label className='font-semibold'>Category:</label>
             <Select
@@ -162,10 +162,20 @@ function Search() {
               <option value='Fitness'>Fitness</option>
               <option value='Eduction'>Eduction</option>
             </Select>
-            <button type='submit' className='font-Montserrat font-semibold px-3 text-purple-400 hover:-translate-y-1 hover:scale-105 transition duration-300'>
+            
+            <button type='submit' className='font-Montserrat font-semibold px-3 text-purple-400 hover:text-purple-600 duration-300'>
             Apply
           </button>
+
           </div>
+          {/* <div className='flex items-center gap-2'>
+            <label className='font-semibold'>Sort:</label>
+            <Select onChange={handleChange} value={sidebarData.sort} id='sort'>
+              <option value='desc'>Ascending </option>
+              <option value='asc'>Descending </option>
+            </Select>
+          </div> */}
+          
           </form>
 
 

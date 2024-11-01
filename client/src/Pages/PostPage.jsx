@@ -88,7 +88,7 @@ function PostPage() {
 
       <div className="mb-4 md:mb-0 w-full max-w-screen-lg mx-auto relative" >
         <div className="absolute left-0 bottom-0 w-full h-full bg-gradient-to-t from-gray-950/75 via-transparent to-transparent rounded-b-lg"></div>
-        <img src={post && post.image} alt={post && post.title} className="w-full rounded-lg" />
+        <img src={post && post.image} alt={post && post.title} className="w-full " />
         <span className=' absolute mt-14 right-3 text-gray-600 dark:text-gray-400 text-xs Montserrat-regular '>
           {post && (post.content.length / 1000).toFixed(0)} mins read
         </span>
