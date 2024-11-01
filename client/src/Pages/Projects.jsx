@@ -2,9 +2,6 @@ import { Select, TextInput } from 'flowbite-react';
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { IoSearchOutline } from "react-icons/io5";
-
-import { PiGearSixFill } from "react-icons/pi";
-import { BiLoaderCircle } from 'react-icons/bi';
 import { TbLoader } from 'react-icons/tb';
 
 function Projects() {

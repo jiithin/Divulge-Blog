@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, Button, Card, Table } from 'flowbite-react';
+import { Modal, Button, Table } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 

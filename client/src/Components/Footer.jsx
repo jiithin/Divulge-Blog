@@ -6,8 +6,7 @@ import { FaDev } from "react-icons/fa";
 import { BiSolidUserRectangle } from "react-icons/bi";
 import { toggleTheme } from '../redux/theme/themeSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { IoMoon } from "react-icons/io5";
-import { TbSunFilled } from "react-icons/tb";
+import { CgDarkMode } from 'react-icons/cg';
 
 function Footer() {
     const dispatch = useDispatch();
@@ -26,7 +25,7 @@ function Footer() {
             {/* darkmode button footer */}
             <button type="button" className="w-12 h-10 lg:hidden md:hidden sm:inline   bg-transparent   rounded-lg text-sm px-3 text-center items-center  dark:bg-inherit  " 
                onClick={() => dispatch(toggleTheme())}>
-               {theme === 'light' ?(<IoMoon className='w-6 h-6 duration-500 text-indigo-400'/>):(<TbSunFilled className='w-7 h-7 duration-500 rotate-90 text-indigo-300'/>)}
+               {theme === 'light' ?(<CgDarkMode className='w-7 h-7 duration-500 text-indigo-500'/>):(<CgDarkMode className='w-7 h-7 duration-500 rotate-180 text-indigo-200'/>)}
            </button>
 
             {/* <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-purple-500 sm:mb-0 dark:text-purple-400">
