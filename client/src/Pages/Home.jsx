@@ -231,10 +231,10 @@ function Home() {
 
 {/* list end */}
 <div className="flex flex-col h-auto bg-transparent items-center mt-5 font-Montserrat mx-auto max-w-6xl mb-5">
-  <div className="grid gap-7  px-5 grid-cols-3">
+  <div className="grid gap-7  px-5 grid-cols-3 ">
    {/* cards */}
    {userPosts && userPosts.length > 0 ? (userPosts.slice(5,8).map((post) => (
-  <div className="relative mx-auto col-span-2 w-full pt-3">
+  <div className="relative mx-auto col-span-3 md:col-span-2 lg:col-span-2 w-full pt-3">
   <Link to={`/post/${post.slug}`} className="relative inline-block w-full transform transition-transform duration-300 ease-in-out">
     <div className="rounded-lg">
       <div className="relative bg-purple-800/20 flex h-auto justify-center overflow-hidden">
@@ -275,8 +275,8 @@ function Home() {
       </div>
 )}
 
-<div className="col-span-1 items-start pt-3">
-<div className="mx-auto max-w-xs rounded-xl px-6 py-10 text-gray-600 dark:text-gray-100">
+<div className="col-span-1 items-start pt-3 hidden md:block lg:block">
+<div className="mx-auto max-w-xs rounded-xl px-3 text-gray-600 dark:text-gray-100">
   <p className="mb-4 w-fit rounded-md bg-purple-200 dark:bg-purple-200/70 px-2 py-1 text-sm font-medium text-purple-700 dark:text-purple-800">Related</p>
   <p className="mb-2 text-2xl">Read our Community guidelines</p>
   <p className="mb-6 text-gray-500 dark:text-gray-300">Avoid offensive or derogatory language. Be mindful of the words you choose and their potential impact on readers. 
