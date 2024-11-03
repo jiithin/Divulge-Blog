@@ -29,7 +29,7 @@ function About() {
                     Discover, delve deeper
                         <span className="my-1 inline-block border-b-8 border-g4 bg-purple-500 px-4 font-bold text-g4 animate__animated animate__flash">Divulge</span>
                     </h2>
-                    <p className="text-base text-gray-700">Divulge is a Blogging platform created by a jithin. We're committed to fostering a community where ideas are shared, knowledge is gained, and connections are made.</p>
+                    <p className="text-base text-gray-700 dark:text-gray-300">Divulge is a Blogging platform created by a jithin. This project began as a hobby, but its scope and complexity have grown significantly. If you're interested in taking it, I recommend having a strong understanding of React and Node.js.</p>
                     <div className="mt-10 flex flex-col items-center md:flex-row backdrop-blur-md">
 
                         <a href="https://github.com/jiithin/" aria-label="" className="group inline-flex items-center font-semibold text-g1">Watch how
