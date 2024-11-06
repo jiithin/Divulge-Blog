@@ -119,7 +119,7 @@ function PostPage() {
       
 
 
-      <div className="px-4 lg:px-0 mt-10 text-gray-700 dark:text-gray-400 max-w-screen-lg mx-auto text-lg leading-relaxed">
+      <div className="lg:px-0 mt-10 text-gray-700 dark:text-gray-400 max-w-screen-lg mx-auto text-lg leading-relaxed">
 
  
             {/* <span className='lg:hidden text-xs text-gray-500 font-semibold absolute right-8'>
