@@ -58,7 +58,7 @@ function Footer() {
               <a href="https://dev.to/jiithin/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
               <FaDev />
               </a>
-              <a href="https://portfolio-jithin.vercel.app/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+              <a href="https://jithin.onrender.com/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
               <BiSolidUserRectangle />
               </a>
               
