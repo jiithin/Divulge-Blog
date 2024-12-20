@@ -11,7 +11,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../redux/theme/themeSlice';
 
 import { signoutSuccess } from '../redux/user/userSlice.js';
-import { BiSolidGridAlt } from "react-icons/bi";
+import { IoPieChart } from "react-icons/io5";
+import { IoExit  } from "react-icons/io5";
 
 function Header() {
   const path = useLocation().pathname;
@@ -84,7 +85,7 @@ function Header() {
 
   <button type="button" className="w-12 h-10 hidden sm:inline  bg-transparent   rounded-lg text-sm px-3 text-center items-center  dark:bg-inherit" 
   onClick={() => dispatch(toggleTheme())}>
-  {theme === 'light' ?(<CgDarkMode className='w-7 h-7 duration-500 text-indigo-400'/>):(<CgDarkMode className='w-7 h-7 rotate-180 duration-500 text-teal-300'/>)}
+  {theme === 'light' ?(<CgDarkMode className='w-7 h-7 duration-500 text-indigo-500'/>):(<CgDarkMode className='w-7 h-7 rotate-180 duration-500 text-indigo-300'/>)}
 </button>
 
 
@@ -143,11 +144,13 @@ function Header() {
   </Navbar.Link> */}
   
   {currentUser ? (
-  <Navbar.Link  as={'div'} className='hover:translate-y-0.5 duration-300 flex justify-between lg:hidden md:hidden p-3 mt-4'>
-    <Link to={'/dashboard?tab=stats'} className=' bg-indigo-500/85 dark:bg-transparent  flex items-center justify-center text-gray-100  px-3 py-2 rounded-lg font-Montserrat font-bold text-lg space-x-2  '><BiSolidGridAlt className='h-6 w-6 text-blue-300 dark:text-indigo-400 mr-1'/> Dashboard</Link>
-    <Link onClick={handleSignout} className='text-end text-red-500 dark:text-red-400 lg:text-base p-1 font-Montserrat font-bold mt-2'>SignOut</Link>
+  <Navbar.Link  as={'div'} className='hover:translate-y-0.5 duration-300 lg:hidden md:hidden p-3 mt-4'>
+
+    <Link to={'/dashboard?tab=stats'} className='  flex items-center justify-center text-transparent bg-clip-text bg-gradient-to-l to-teal-300 via-purple-400 from-blue-400 px-3 py-2 rounded-lg font-Montserrat font-bold text-lg space-x-2  '><IoPieChart className='h-6 w-6 text-indigo-400 dark:text-indigo-400 mr-1'/> Dashboard</Link>
+
+    <Link onClick={handleSignout} className='text-end text-red-500 flex items-center justify-center  dark:text-red-400 lg:text-base p-1 font-Montserrat font-bold text-lg mt-8 mb-6'><IoExit  className='h-6 w-6 text-red-500 dark:text-red-400 mr-1'/>SignOut</Link>
   </Navbar.Link>):(<></>)}
-  
+  <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
 </Navbar.Collapse>
 
 

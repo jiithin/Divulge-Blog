@@ -25,7 +25,7 @@ function Footer() {
             {/* darkmode button footer */}
             <button type="button" className="w-12 h-10 lg:hidden md:hidden sm:inline   bg-transparent   rounded-lg text-sm px-3 text-center items-center  dark:bg-inherit  " 
                onClick={() => dispatch(toggleTheme())}>
-               {theme === 'light' ?(<CgDarkMode className='w-7 h-7 duration-500 text-indigo-500'/>):(<CgDarkMode className='w-7 h-7 duration-500 rotate-180 text-indigo-200'/>)}
+               {theme === 'light' ?(<CgDarkMode className='w-7 h-7 duration-500 text-indigo-500'/>):(<CgDarkMode className='w-7 h-7 duration-500 rotate-180 text-indigo-300'/>)}
            </button>
 
             {/* <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-purple-500 sm:mb-0 dark:text-purple-400">
